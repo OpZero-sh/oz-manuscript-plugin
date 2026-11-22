@@ -19,5 +19,10 @@
   "supportUrl": "https://opzero.sh/support",
   "termsOfServiceUrl": "https://opzero.sh/terms",
   "icon": "./assets/icon.png",
-  "license": "MIT"
+  "license": "MIT",
+  "network": {
+    "hosts": [
+      "oz-manuscript.mcp.opzero.sh"
+    ]
+  }
 }
