@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oz-manuscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
   "author": {
     "name": "OpZero",

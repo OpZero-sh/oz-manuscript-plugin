@@ -10,16 +10,6 @@
             "timeout": 5
           }
         ]
-      },
-      {
-        "matcher": "^mcp__plugin_oz-manuscript_oz-manuscript__(delete_chapter|delete_manuscript)$",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/confirm-delete.cjs\"",
-            "timeout": 5
-          }
-        ]
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "oz-manuscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Oz Manuscript",
   "description": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
   "compat": {

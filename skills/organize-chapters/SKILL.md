@@ -57,7 +57,7 @@ Both are permanent. There is no undo and no trash.
 3. Wait for a clear yes that names the chapter or manuscript.
 4. `delete_chapter` with `manuscript` and `chapter`, or `delete_manuscript` with `manuscript`.
 
-A request such as "clean up the draft" or "remove the weak chapters" is not enough to delete. Ask which ones. In Claude Code this plugin's hook asks for confirmation before either delete runs.
+A request such as "clean up the draft" or "remove the weak chapters" is not enough to delete. Ask which ones.
 
 ## Problems
 
