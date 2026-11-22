@@ -27,12 +27,11 @@ The `write-manuscript` folder holds a `references` file on reading long chapters
 
 `continuity-editor` checks one detail across chapters, such as what a character knows, a date or a name, and returns quoted evidence with chapter references. It can only read: its tools are `list_manuscripts`, `get_outline`, `read_chapter` and `list_notes`. It makes no changes to the book.
 
-### Hooks
+### Hook
 
-Two `PreToolUse` hooks run in Claude Code. Both need Node.js on your PATH, read the pending tool call from standard input, and do not touch files or the network.
+One `PreToolUse` hook runs in Claude Code. It needs Node.js on your PATH, reads the pending tool call from standard input, and does not touch files or the network.
 
 - `hooks/check-revision.cjs` runs before `edit_chapter` and `write_chapter`. It blocks the call when it carries no `if_revision`, so Claude reads the chapter first. The server then checks that revision at save time, and if you saved a newer draft in the editor the write is refused and nothing is lost.
-- `hooks/confirm-delete.cjs` runs before `delete_chapter` and `delete_manuscript`. Both are permanent, so Claude Code asks you to confirm and names what would be deleted.
 
 ## What the plugin connects to and sends
 
