@@ -1,0 +1,23 @@
+{
+  "name": "oz-manuscript",
+  "version": "1.0.0",
+  "description": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "repository": "https://github.com/OpZero-sh/oz-manuscript-plugin",
+  "keywords": [
+    "writing",
+    "manuscript",
+    "editing"
+  ],
+  "displayName": "Oz Manuscript",
+  "homepage": "https://github.com/OpZero-sh/oz-manuscript-plugin",
+  "documentationUrl": "https://github.com/OpZero-sh/oz-manuscript-plugin#readme",
+  "privacyPolicyUrl": "https://opzero.sh/privacy",
+  "supportUrl": "https://opzero.sh/support",
+  "termsOfServiceUrl": "https://opzero.sh/terms",
+  "icon": "./assets/icon.png",
+  "license": "MIT"
+}

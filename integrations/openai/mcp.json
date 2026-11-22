@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "oz-manuscript": {
+      "type": "streamable-http",
+      "url": "https://oz-manuscript.mcp.opzero.sh/mcp"
+    }
+  }
+}

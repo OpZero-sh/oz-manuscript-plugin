@@ -1,0 +1,12 @@
+{
+  "oz-manuscript": {
+    "url": "https://oz-manuscript.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "get_outline",
+      "list_manuscripts",
+      "list_notes",
+      "read_chapter"
+    ],
+    "token_env": "OZ_MANUSCRIPT_ACCESS_TOKEN"
+  }
+}

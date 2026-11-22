@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "oz-manuscript",
+  "version": "1.0.0",
+  "description": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://github.com/OpZero-sh/oz-manuscript-plugin",
+  "repository": "https://github.com/OpZero-sh/oz-manuscript-plugin",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Oz Manuscript",
+        "shortDescription": "Write your next chapter",
+        "longDescription": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/OpZero-sh/oz-manuscript-plugin",
+        "privacyPolicyURL": "https://opzero.sh/privacy",
+        "supportURL": "https://opzero.sh/support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

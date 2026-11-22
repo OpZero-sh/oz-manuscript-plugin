@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "name": "oz-manuscript",
+  "version": "1.0.0",
+  "displayName": "Oz Manuscript",
+  "description": "Write and revise a book chapter by chapter, keep passage notes, and check continuity across a private manuscript.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "write-manuscript",
+        "path": "skills/write-manuscript/SKILL.md"
+      }
+    ],
+    "mcpServers": []
+  }
+}
