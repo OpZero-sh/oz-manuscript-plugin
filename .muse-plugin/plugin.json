@@ -13,6 +13,18 @@
       {
         "id": "write-manuscript",
         "path": "skills/write-manuscript/SKILL.md"
+      },
+      {
+        "id": "review-with-notes",
+        "path": "skills/review-with-notes/SKILL.md"
+      },
+      {
+        "id": "organize-chapters",
+        "path": "skills/organize-chapters/SKILL.md"
+      },
+      {
+        "id": "export-manuscript",
+        "path": "skills/export-manuscript/SKILL.md"
       }
     ],
     "mcpServers": []
