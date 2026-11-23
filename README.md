@@ -29,10 +29,9 @@ The `write-manuscript` folder holds a `references` file on reading long chapters
 
 ### Hooks
 
-Two `PreToolUse` hooks run in Claude Code. Both need Node.js on your PATH, read the pending tool call from standard input, and do not touch files or the network.
+None. The plugin has no hooks and runs no code on your machine.
 
-- `hooks/check-revision.cjs` runs before `edit_chapter` and `write_chapter`. It blocks the call when it carries no `if_revision`, so Claude reads the chapter first. The server then checks that revision at save time, and if you saved a newer draft in the editor the write is refused and nothing is lost.
-- `hooks/confirm-delete.cjs` runs before `delete_chapter` and `delete_manuscript`. Both are permanent, so Claude Code asks you to confirm and names what would be deleted.
+The skills carry the safeguards instead. They tell Claude to read a chapter and pass its revision as `if_revision` on every `edit_chapter` and `write_chapter`. The server checks that revision at save time, and if you saved a newer draft in the editor the write is refused and nothing is lost. `delete_chapter` and `delete_manuscript` are permanent, so the skills tell Claude to name what would be deleted and wait for your clear yes.
 
 ## What the plugin connects to and sends
 
@@ -42,10 +41,10 @@ Two `PreToolUse` hooks run in Claude Code. Both need Node.js on your PATH, read 
 
 ### Optional files for other clients
 
-These files are not run by Claude. They exist so the same product can be used from other assistants.
+These files are not run by Claude. They exist so the same product can be used from other assistants. The two scripts that use them are not in this repository. They live in the catalog repository, [OpZero-sh/plugins](https://github.com/OpZero-sh/plugins).
 
-- `scripts/build_openai.py` builds a ZIP package for ChatGPT and Codex from the files in this repository. It reads local files and writes ZIP files to the folder you name. It makes no network calls.
-- `integrations/grok_example.py` is a sample for the xAI API. It runs only when you run it. With `--dry-run` it prints a request and sends nothing. Without it, the script reads `XAI_API_KEY` from your environment and sends one request to `https://api.x.ai/v1/responses`. If `OZ_MANUSCRIPT_ACCESS_TOKEN` is set, that OpZero access token is included in the request so that xAI can call the Oz Manuscript server for you.
+- The catalog's `tools/build_openai.py` builds a ZIP package for ChatGPT and Codex from this repository's skills, license, `assets/icon.png` and `integrations/openai`. It reads local files and writes ZIP files to the folder you name. It makes no network calls.
+- The catalog's `tools/grok_example.py` is a sample for the xAI API. It runs only when you run it. It reads `integrations/grok-servers.json`. With `--dry-run` it prints a request and sends nothing. Without it, the script reads `XAI_API_KEY` from your environment and sends one request to `https://api.x.ai/v1/responses`. If `OZ_MANUSCRIPT_ACCESS_TOKEN` is set, that OpZero access token is included in the request so that xAI can call the Oz Manuscript server for you.
 - `integrations/grok-servers.json`, `integrations/muse-settings.json` and the files under `integrations/openai` are configuration for those clients. They contain the same server URL and no credentials.
 
 ## Limits

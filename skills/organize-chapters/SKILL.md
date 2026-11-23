@@ -27,7 +27,7 @@ Show the author the new order as a numbered list before you call it when more th
 
 ## Rename a chapter
 
-`write_chapter` with `manuscript`, `chapter`, `title` and `if_revision`, and no `text`. The text stays as it is. The chapter id does not change when the title does. In Claude Code this plugin's hook requires `if_revision` on every `write_chapter` call, so read the chapter first even for a rename.
+`write_chapter` with `manuscript`, `chapter`, `title` and `if_revision`, and no `text`. The text stays as it is. The chapter id does not change when the title does. Always pass `if_revision` on a `write_chapter` call, so read the chapter first even for a rename.
 
 There is no tool to rename a manuscript or change its author or description.
 
@@ -57,7 +57,7 @@ Both are permanent. There is no undo and no trash.
 3. Wait for a clear yes that names the chapter or manuscript.
 4. `delete_chapter` with `manuscript` and `chapter`, or `delete_manuscript` with `manuscript`.
 
-A request such as "clean up the draft" or "remove the weak chapters" is not enough to delete. Ask which ones. In Claude Code this plugin's hook asks for confirmation before either delete runs.
+A request such as "clean up the draft" or "remove the weak chapters" is not enough to delete. Ask which ones. Nothing else asks the author before a delete runs, so never call either delete without that yes.
 
 ## Problems
 

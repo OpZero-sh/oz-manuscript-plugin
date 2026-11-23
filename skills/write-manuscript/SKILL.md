@@ -72,7 +72,7 @@ Read one chapter at a time, and only the chapters the task needs. Do not load a 
 
 Pass the `revision` from your last read as `if_revision` on every `edit_chapter` and `write_chapter`. If the chapter changed since that read, the write is refused and nothing is written. Read the chapter again, look at what changed, and reapply your change to the new text. Do not retry blind.
 
-In Claude Code this plugin's hook blocks an `edit_chapter` or `write_chapter` call that has no `if_revision`, and tells you to read the chapter first.
+Never call `edit_chapter` or `write_chapter` without `if_revision`. If you do not hold a revision from a read of that chapter, read the chapter first.
 
 ## Problems
 
